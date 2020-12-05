@@ -21,8 +21,8 @@ class SearchesController < ApplicationController
   def match(model, value)
     # modelがuserの場合の処理
     if model == 'user'
-      # whereでvalueと完全一致するnameを探します
       User.where("name LIKE ?", "#{value}")
+    # modelがbookの場合の処理
     elsif model == 'book'
       Book.where("title LIKE ?", "#{value}%")
     end
