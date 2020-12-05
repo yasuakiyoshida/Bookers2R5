@@ -1,7 +1,1 @@
 <!-- 検索結果表示画面 -->
-<h2>Books search for ""</h2>
-<% if @books.exists? %>
-  <%= render '/books/index', books: @books %>
-<% else %>
-  <p>該当なし</p>
-<% end %>
